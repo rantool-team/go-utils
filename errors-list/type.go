@@ -13,6 +13,7 @@ type errorsList struct {
 
 type jsonErrors struct {
 	ErrorOnUmMarshall func(string) goerror.Error
+	ErronOnMarshal    func(any) goerror.Error
 }
 
 type folderErrorsList struct {

@@ -1,6 +1,8 @@
 package errorslist
 
 import (
+	"fmt"
+
 	goerror "github.com/rantool-team/go-error"
 	"github.com/rantool-team/go-error/language"
 )
@@ -105,8 +107,14 @@ var ErrorsList = errorsList{
 	JsonErrors: jsonErrors{
 		ErrorOnUmMarshall: func(content string) goerror.Error {
 			return goerror.CreateErrorInMultiplesLanguage(language.MessageSet{
-				Portuguese: "O conteúdo a seguir não pode ser transformado em JSON\nContent:\n" + content,
-				English:    "The folowing content can't be transformed in JSON\nContent:\n" + content,
+				Portuguese: "O conteúdo a seguir não pode ser transformado em objeto\nContent:\n" + content,
+				English:    "The folowing content can't be transformed in object\nContent:\n" + content,
+			}, language.MessageSet{})
+		},
+		ErronOnMarshal: func(content any) goerror.Error {
+			return goerror.CreateErrorInMultiplesLanguage(language.MessageSet{
+				Portuguese: fmt.Sprintf("O conteúdo a seguir não pode ser transformado em JSON string\nContent: %q\n", content),
+				English:    fmt.Sprintf("The folowing content can't be transformed in JSON string\nContent: %q\n", content),
 			}, language.MessageSet{})
 		},
 	},
