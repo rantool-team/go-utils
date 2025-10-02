@@ -3,7 +3,7 @@ package path
 import (
 	"path/filepath"
 
-	"github.com/pedro-makoski/go-utils/array"
+	"github.com/rantool-team/go-utils/array"
 
 	goerror "github.com/rantool-team/go-error"
 )

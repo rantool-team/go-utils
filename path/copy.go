@@ -1,7 +1,7 @@
 package path
 
 import (
-	"github.com/pedro-makoski/go-utils/folderfile"
+	"github.com/rantool-team/go-utils/folderfile"
 
 	goerror "github.com/rantool-team/go-error"
 )

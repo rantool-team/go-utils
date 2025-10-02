@@ -1,8 +1,8 @@
 package path
 
 import (
-	errorslist "github.com/pedro-makoski/go-utils/errors-list"
-	"github.com/pedro-makoski/go-utils/file"
+	errorslist "github.com/rantool-team/go-utils/errors-list"
+	"github.com/rantool-team/go-utils/file"
 
 	goerror "github.com/rantool-team/go-error"
 )

@@ -1,6 +1,6 @@
 package path
 
-import "github.com/pedro-makoski/go-utils/file"
+import "github.com/rantool-team/go-utils/file"
 
 type Path struct {
 	Path string

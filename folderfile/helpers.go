@@ -3,7 +3,7 @@ package folderfile
 import (
 	"path/filepath"
 
-	"github.com/pedro-makoski/go-utils/folder"
+	"github.com/rantool-team/go-utils/folder"
 
 	goerror "github.com/rantool-team/go-error"
 )

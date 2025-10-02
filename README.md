@@ -7,18 +7,18 @@ Este repositório contém uma coleção de pacotes Go com funções utilitárias
 Para usar os pacotes em seu projeto, você pode usar o `go get`:
 
 ```bash
-go get github.com/pedro-makoski/go-utils
+go get github.com/rantool-team/go-utils
 ```
 
 Você pode também baixar pacotes específicos da seguinte forma:
 ```bash
-go get github.com/pedro-makoski/<nome-do-pacote>
+go get github.com/rantool-team/<nome-do-pacote>
 ```
 
 E então importar o pacote desejado no seu código:
 
 ```go
-import "github.com/pedro-makoski/go-utils/array"
+import "github.com/rantool-team/go-utils/array"
 ```
 
 ## Pacotes

@@ -1,2 +1,4 @@
 github.com/rantool-team/go-error v0.0.0-20250929195206-17000a064bf1 h1:e4KDp48X644kbqKIE169HA5tJObDgC+jPh7YT7Rf68A=
 github.com/rantool-team/go-error v0.0.0-20250929195206-17000a064bf1/go.mod h1:sEB7+jX/XLGR5LUu9XTbl/tbPE/FKqFgFNFVnWRPi3g=
+github.com/rantool-team/go-error v0.0.0-20251002184935-5760c1fadec0 h1:DVgHNkXBHBeKQevSCLNCGdGTiNUMrHfNhxaYWcefxZg=
+github.com/rantool-team/go-error v0.0.0-20251002184935-5760c1fadec0/go.mod h1:sEB7+jX/XLGR5LUu9XTbl/tbPE/FKqFgFNFVnWRPi3g=

@@ -5,10 +5,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/pedro-makoski/go-utils/cache"
-	errorslist "github.com/pedro-makoski/go-utils/errors-list"
-	"github.com/pedro-makoski/go-utils/file"
 	goerror "github.com/rantool-team/go-error"
+	"github.com/rantool-team/go-utils/cache"
+	errorslist "github.com/rantool-team/go-utils/errors-list"
+	"github.com/rantool-team/go-utils/file"
 )
 
 const GET_ALL_PATHS_REGISTER_NAME = "folder.get-all-paths"

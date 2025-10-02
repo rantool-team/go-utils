@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"os"
 
-	errorslist "github.com/pedro-makoski/go-utils/errors-list"
-	"github.com/pedro-makoski/go-utils/file"
 	goerror "github.com/rantool-team/go-error"
+	errorslist "github.com/rantool-team/go-utils/errors-list"
+	"github.com/rantool-team/go-utils/file"
 )
 
 func WriteJSONFile[Format any](path string, object Format, prefix string, indent string, permissionFile os.FileMode) goerror.Error {
