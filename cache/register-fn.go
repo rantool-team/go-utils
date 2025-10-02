@@ -8,16 +8,9 @@ type RegisterConfigs struct {
 
 func Register(configs RegisterConfigs) {
 	AllCache.generateComandInCacheIfNecessari(configs.NameUnique)
-	AllCache[configs.NameUnique] = generateParamsReturns(configs.Params, configs.Retornos, AllCache[configs.NameUnique])
-}
+	parametroName := generateNomeDeParametros(configs.Params)
 
-func generateParamsReturns(params []any, returns []any, previousName cacheForComand) cacheForComand {
-	new := previousName
-	parametroName := generateNomeDeParametros(params)
-
-	new[parametroName] = cacheUnique{
-		Retornos: returns,
+	AllCache[configs.NameUnique][parametroName] = cacheUnique{
+		Retornos: configs.Retornos,
 	}
-
-	return new
 }

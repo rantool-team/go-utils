@@ -1,7 +1,13 @@
 package folder
 
-import "github.com/pedro-makoski/go-utils/file"
+import (
+	"os"
+)
 
 func IsFolder(path string) bool {
-	return !file.IsFile(path)
+	info, err := os.Stat(path)
+	if err != nil {
+		return false
+	}
+	return info.IsDir()
 }

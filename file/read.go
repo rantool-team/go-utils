@@ -53,7 +53,7 @@ func ReadFileInfo(path string) (*FileInfo, goerror.Error) {
 	}
 
 	content, errorFull := ReadFile(path)
-	if err != nil {
+	if errorFull.HasError() {
 		return nil, errorFull
 	}
 

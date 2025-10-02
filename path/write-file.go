@@ -9,7 +9,7 @@ import (
 
 func (p Path) WriteInFile(content string, permission file.FilePermissions) goerror.Error {
 	if p.IsFile() {
-		p.writeInFile(content, permission)
+		return p.writeInFile(content, permission)
 	}
 
 	return errorslist.ErrorsList.FolderFile.ItMustBEAFile(p.Path)

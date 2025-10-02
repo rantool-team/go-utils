@@ -1,7 +1,6 @@
 package folder
 
 import (
-	"io"
 	"os"
 	"path/filepath"
 
@@ -12,7 +11,7 @@ import (
 )
 
 func CopyFolder(srcRoot, dstRoot string) goerror.Error {
-	allPaths, err := GetAllPaths(srcRoot)
+	allPaths, err := GetAllPathsRecursive(srcRoot)
 	if err.HasError() {
 		return errorslist.ErrorsList.Folder.ErrorOnGetAllPaths(srcRoot)
 	}
@@ -54,7 +53,7 @@ func createDestinationDirectory(path string, mode os.FileMode) goerror.Error {
 
 func copySourceFile(src, dst string) goerror.Error {
 	err := file.CopyFile(src, dst)
-	if err.HasError() && err.Error() != io.EOF.Error() {
+	if err.HasError() {
 		return err
 	}
 
