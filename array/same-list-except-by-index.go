@@ -1,14 +1,12 @@
 package array
 
 func SameListExcept[T any](list []T, indexToNotInclude int) []T {
-	newList := []T{}
+	var newList []T
 	for index, value := range list {
 		if index == indexToNotInclude {
-			break
+			continue
 		}
-
 		newList = append(newList, value)
 	}
-
 	return newList
 }
