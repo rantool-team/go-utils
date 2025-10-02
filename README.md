@@ -10,12 +10,6 @@ Para usar os pacotes em seu projeto, você pode usar o `go get`:
 go get github.com/pedro-makoski/go-utils
 ```
 
-E então importar o pacote desejado no seu código:
-
-```go
-import "github.com/pedro-makoski/go-utils/array"
-```
-
 ## Pacotes
 
 ### array
