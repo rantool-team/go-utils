@@ -4,7 +4,7 @@ import (
 	"io"
 	"os"
 
-	errorslist "github.com/pedro-makoski/go-utils/errors-list"
+	errorslist "github.com/rantool-team/go-utils/errors-list"
 
 	goerror "github.com/rantool-team/go-error"
 )

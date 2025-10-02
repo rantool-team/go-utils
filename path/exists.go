@@ -1,8 +1,8 @@
 package path
 
 import (
-	"github.com/pedro-makoski/go-utils/file"
-	"github.com/pedro-makoski/go-utils/folder"
+	"github.com/rantool-team/go-utils/file"
+	"github.com/rantool-team/go-utils/folder"
 )
 
 func (p Path) ThisPathExists() bool {

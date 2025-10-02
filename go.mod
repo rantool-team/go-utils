@@ -1,5 +1,5 @@
-module github.com/pedro-makoski/go-utils
+module github.com/rantool-team/go-utils
 
 go 1.24.5
 
-require github.com/rantool-team/go-error v0.0.0-20250929195206-17000a064bf1
+require github.com/rantool-team/go-error v0.0.0-20251002184935-5760c1fadec0
