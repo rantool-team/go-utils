@@ -11,19 +11,15 @@ import (
 	goerror "github.com/rantool-team/go-error"
 )
 
-// Non-Recursive Cache Keys
 const GET_ALL_PATHS_REGISTER_NAME = "folder.get-all-paths"
 const GET_ALL_PATHS_WITH_EXT_REGISTER_NAME = "folder.get-all-paths-with-ext-register-name"
 const GET_ALL_FOLDERS_REGISTER_NAME = "folder.get-all-folders"
 const GET_ALL_FILES_REGISTER_NAME = "folder.get-all-files"
 
-// Recursive Cache Keys
 const GET_ALL_PATHS_RECURSIVE_REGISTER_NAME = "folder.get-all-paths-recursive"
 const GET_ALL_PATHS_WITH_EXT_RECURSIVE_REGISTER_NAME = "folder.get-all-paths-with-ext-recursive"
 const GET_ALL_FOLDERS_RECURSIVE_REGISTER_NAME = "folder.get-all-folders-recursive"
 const GET_ALL_FILES_RECURSIVE_REGISTER_NAME = "folder.get-all-files-recursive"
-
-// --- Non-Recursive Functions ---
 
 func GetAllPaths(root string) ([]string, goerror.Error) {
 	return getAllPathsFromCondition(func(path string) bool {
@@ -207,8 +203,6 @@ func CachedGetAllFiles(root string) ([]string, goerror.Error) {
 
 	return content, err
 }
-
-// --- Cached Recursive Functions ---
 
 func CachedGetAllPathsRecursive(path string) ([]string, goerror.Error) {
 	var content []string
