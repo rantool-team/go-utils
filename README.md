@@ -10,6 +10,17 @@ Para usar os pacotes em seu projeto, você pode usar o `go get`:
 go get github.com/pedro-makoski/go-utils
 ```
 
+Você pode também baixar pacotes específicos da seguinte forma:
+```bash
+go get github.com/pedro-makoski/<nome-do-pacote>
+```
+
+E então importar o pacote desejado no seu código:
+
+```go
+import "github.com/pedro-makoski/go-utils/array"
+```
+
 ## Pacotes
 
 ### array
