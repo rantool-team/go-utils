@@ -21,16 +21,32 @@ func isUNCBase(path string) bool {
 func (p Path) HasParentPath() bool {
 	clean := filepath.Clean(p.Path)
 
-	if runtime.GOOS == "windows" {
-		clean = strings.ReplaceAll(clean, "/", `\`)
-		if isWindowsRoot(clean) || isUNCBase(clean) {
-			return false
-		}
-	} else {
-		if clean == "/" {
-			return false
-		}
+	isRoot := handleRunTimeOnParentPathAndReturnIfItsRoot(&clean)
+
+	if isRoot {
+		return false
 	}
 
 	return filepath.Dir(clean) != clean
+}
+
+func handleRunTimeOnParentPathAndReturnIfItsRoot(clean *string) bool {
+	if runtime.GOOS == "windows" {
+		return handleWindowsAndReturnIfItsRoot(clean)
+	}
+
+	return handleLinuxAndReturnIfItsRott(clean)
+}
+
+func handleWindowsAndReturnIfItsRoot(clean *string) bool {
+	*clean = strings.ReplaceAll(*clean, "/", `\`)
+	if isWindowsRoot(*clean) || isUNCBase(*clean) {
+		return true
+	}
+
+	return false
+}
+
+func handleLinuxAndReturnIfItsRott(clean *string) bool {
+	return *clean == "/"
 }
